@@ -1,0 +1,14 @@
+# Notes on the match statement documentation
+- The `match` keyword denotes the subject expression
+  - The subject expression can have any number of variables or literals, but no expressions
+- The `case` keyword denotes a pattern to match, which can take many forms.
+  - `_` is the wildcard pattern, which will match anything
+  - A literal will match exactly that literal
+  - Any other non-keyword will create a capturing match, which stores the matching expression in that variable
+  - You can "or" matches with the `|` keyword
+  - You can use the `as` keyword to store the match with a capturing pattern
+  - You can match on attributes with `.` accessing
+  - You can match the contents of a sequence either exactly, or with star capturing patterns, or a mix of the two.
+  - You can do the same with mappings, with any mix of direct matches, wildcard matches, or `**` "kwarg" capturing expressions
+  - Classes can be matched against with either attribute notation or positional notation, if the class supports this.
+  - MOST IMPORTANTLY, ALL OF THESE CAN BE STACKED FOR UNLIMITED POTENTIAL
