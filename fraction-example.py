@@ -29,7 +29,9 @@ def print_fraction(frac: Fraction | int) -> str:
             return str(n)
         case Fraction(n, d) if n == d:
             return "1"
-        case Fraction(n, d) if (n < 0 and d > 0) or (n > 0 and d < 0):
+        case Fraction(n, d) if n < 0 and d < 0:
+            return print_fraction(Fraction(-n, -d))
+        case Fraction(n, d) if n < 0 or d < 0:
             return "-" + print_fraction(Fraction(abs(n), abs(d)))
         case Fraction(n, d) if n > d:
             return str(n // d) + print_fraction(Fraction(n % d, d))
