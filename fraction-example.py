@@ -1,6 +1,12 @@
 # an example for the extended use of match statements for a fraction class
+from math import gcd
+
 NUMS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 DENS = "₀₁₂₃₄₅₆₇₈₉"
+
+
+def format_script(script: str, number: int) -> str:
+    return "".join([script[int(x)] for x in str(number)])
 
 
 class Fraction:
@@ -27,8 +33,10 @@ def print_fraction(frac: Fraction | int) -> str:
             return "-" + print_fraction(Fraction(abs(n), abs(d)))
         case Fraction(n, d) if n > d:
             return str(n // d) + print_fraction(Fraction(n % d, d))
+        case Fraction(n, d) if (g := gcd(n, d)) > 1:
+            return print_fraction(Fraction(n // g, d // g))
         case Fraction(n, d):
-            return NUMS[n] + "/" + DENS[d]
+            return format_script(NUMS, n) + "/" + format_script(DENS, d)
         case _:
             raise Exception("frac was not matched")
 
