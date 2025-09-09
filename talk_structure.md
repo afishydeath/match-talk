@@ -4,8 +4,8 @@
 
 - Hey I'm sam
 - school at uts (nearly done)
-- coding for most of my life
-- pycon a few times
+- coding for most of my life (since 10yrs old)
+- pycon a few times (4th time presenting, 6th time attending)
 
 ## What's wrong with if statements?? (5 minutes)
 
@@ -28,6 +28,7 @@ if isinstance(command, list) and len(command)==2 and command[0] == "move": ...
 - here's where match statements come in!
 - go through the following one by one, match statement first, then it's equivalent if statement
   - note that when pattern matching isn't available, you can still use post-fix if statements to cover missing functionality.
+- MATCH STATEMENTS IN PYTHON ARE MORE THAN NORMAL SWITCHES
 
 ![image-20250901225129297](/home/syn/.config/Typora/typora-user-images/image-20250901225129297.png)
 

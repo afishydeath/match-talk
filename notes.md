@@ -1,4 +1,4 @@
-# Notes on the match statement documentation
+# gNotes on the match statement documentation
 - The `match` keyword denotes the subject expression
   - The subject expression can have any number of variables or literals, but no expressions
 - The `case` keyword denotes a pattern to match, which can take many forms.
