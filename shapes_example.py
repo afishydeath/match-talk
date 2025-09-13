@@ -65,10 +65,12 @@ class Rectangle(Shape):
 
 
 class Square(Rectangle):
-    __match_args__ = ("topleft", "side")
+    __match_args__ = ("point", "side")
 
-    def __init__(self, p: Point, s: int):
-        super().__init__(p, s, s)
+    def __init__(
+        self, point: Point, s: int
+    ):
+        super().__init__(point, s, s)
         self.side = s
 
 
